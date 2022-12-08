@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "436785918685",
+    "project_id": "weather-fits",
+    "storage_bucket": "weather-fits.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:436785918685:android:811248b39431463ceae134",
+        "android_client_info": {
+          "package_name": "com.conestoga.weatherfits"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "436785918685-uva9v2lk036eo4ha2dokl2o271kq5qb9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.conestoga.weatherfits",
+            "certificate_hash": "14796dbc91dd7473afd4ae796d1a7f5eacf35c79"
+          }
+        },
+        {
+          "client_id": "436785918685-q9hig2of4ba6up8r0jdle9pndeam05f0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHj5b0KQngdu5DUgzimW1A9JR70Vr0f0U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "436785918685-q9hig2of4ba6up8r0jdle9pndeam05f0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
