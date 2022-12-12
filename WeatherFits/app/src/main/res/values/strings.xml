@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">Weather Fits</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_fits">FitsActivity</string>
+    <string name="title_activity_wear_types">WearTypesActivity</string>
+    <string name="hint">Enter Address, City or Zip Code</string>
+    <string name="API_KEY">AIzaSyBl788mABMRp2CHJMPL2bs-JsZQ3VvQSSQ</string>
+    <string name="locate">Locate</string>
+    <string name="get_fits">Get Fits</string>
+    <string name="styleselectortitle">Select the look you want</string>
+
+    <!--    Cities for the autocomplete textview-->
+    <string-array name="city_array">
+        <item>Waterloo, ON</item>
+        <item>Kitchener, ON</item>
+        <item>Cambridge, ON</item>
+        <item>Toronto, ON</item>
+        <item>Calgary, AB</item>
+    </string-array>
+
+    <!--    Style Selector  -->
+    <string name="street">Street</string>
+    <string name="formal">Formal</string>
+    <string name="protection">Protection</string>
 </resources>
