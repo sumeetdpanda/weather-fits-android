@@ -10,6 +10,8 @@
     <string name="locate">Locate</string>
     <string name="get_fits">Get Fits</string>
     <string name="styleselectortitle">Select the look you want</string>
+    <string name="fitstitle">In this weather you should wear something like this</string>
+    <string name="getproduct">Get product</string>
 
     <!--    Cities for the autocomplete textview-->
     <string-array name="city_array">
