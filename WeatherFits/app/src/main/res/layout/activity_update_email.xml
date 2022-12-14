@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@android:style/Widget.DeviceDefault.Light.ScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_chng_pass"
+    tools:context=".UpdateEmailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:padding="15dp">
+
+        <RelativeLayout
+            android:id="@+id/Rl_Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/txtHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="@string/update_email"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtHeader"
+                android:layout_marginTop="20dp"
+                android:padding="6dp"
+                android:text="@string/current_email"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edtOldEmail"
+                style="@style/Widget.AppCompat.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtEmail"
+                android:background="@color/white"
+                android:hint="@string/enter_new_email"
+                android:inputType="textEmailAddress"
+                android:padding="6dp"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtOldEmail"
+                android:layout_marginTop="20dp"
+                android:padding="6dp"
+                android:text="@string/password1"
+                android:textSize="16sp" />
+
+
+            <EditText
+                android:id="@+id/edtPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtPassword"
+                android:background="@color/white"
+                android:hint="@string/enter_password"
+                android:inputType="textEmailAddress"
+                android:padding="6dp"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnAuthenticate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtPass"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="70dp"
+                android:text="@string/authenticate" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Rl_Reset_Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Rl_Email"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/txtDisplay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="6dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtNewEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtDisplay"
+                android:layout_marginTop="20dp"
+                android:padding="6dp"
+                android:text="@string/new_email"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/edtNewEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtNewEmail"
+                android:background="@color/white"
+                android:hint="@string/enter_new_email"
+                android:inputType="textEmailAddress"
+                android:padding="6dp"
+                android:textSize="16sp" />
+
+
+            <Button
+                android:id="@+id/btnResetEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtNewEmail"
+                android:layout_marginLeft="70dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginRight="70dp"
+                android:text="@string/update_email" />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</ScrollView>

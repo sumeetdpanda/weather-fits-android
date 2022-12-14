@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".AccountsActivity">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="@color/dark_blue">
+
+                    <ImageView
+                        android:id="@+id/imgLogo"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/main" />
+
+                    <TextView
+                        android:id="@+id/txtWelcome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imgLogo"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:hint="loading"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                        android:textColor="@color/white" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="15dp"
+                    android:background="@color/white"
+                    android:padding="15dp">
+
+                    <LinearLayout
+                        android:id="@+id/lL1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/imgProfile"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/email" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtEmail"
+                            android:text="@string/profile"
+                            android:layout_marginStart="25dp"
+                            android:textSize="20sp"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divider_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/lL1"
+                        android:layout_marginTop="20dp"
+                        android:background="@android:color/darker_gray" />
+
+
+                    <LinearLayout
+                        android:id="@+id/lL2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@id/divider_email">
+                        <ImageView
+                            android:id="@+id/imgGender"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/gender" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtGender"
+                            android:text="@string/profile"
+                            android:layout_marginStart="25dp"
+                            android:textSize="20sp"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divider_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/lL2"
+                        android:layout_marginTop="20dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <LinearLayout
+                        android:id="@+id/lL3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/divider_gender"
+                        android:layout_marginTop="20dp">
+
+                        <ImageView
+                            android:id="@+id/imgPassword"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/pass" />
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txtPass"
+                            android:text="@string/password"
+                            android:layout_marginStart="25dp"
+                            android:textSize="20sp"
+                            android:textColor="@color/black"/>
+
+                    </LinearLayout>
+
+                    <View
+                        android:id="@+id/divider_pass"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/lL3"
+                        android:layout_marginTop="20dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/lL4"
+                        android:layout_marginTop="20dp"
+                        android:layout_below="@+id/divider_pass">
+
+                        <ImageView
+                            android:id="@+id/imgFav"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_below="@id/divider_pass"
+                            android:background="@drawable/favour" />
+
+                        <TextView
+                            android:id="@+id/btnFav"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="25dp"
+                            android:textColor="@color/black"
+                            android:text="@string/favs"
+                            android:textColorHint="@color/white"
+                            android:textSize="20sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/lL4"
+                        android:layout_marginTop="20dp"
+                        android:background="@android:color/darker_gray" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            app:menu="@menu/activity_main_drawer"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>
