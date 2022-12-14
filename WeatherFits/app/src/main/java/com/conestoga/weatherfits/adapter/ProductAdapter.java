@@ -88,16 +88,15 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
 
-        public ImageView imgProductImage;
+        public ImageView imgProductImage, btnGetProduct;
         public TextView txtProductTitle;
-        public Button btnGetProduct;
         public ImageButton btnFav;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             imgProductImage = (ImageView) itemView.findViewById(R.id.imgProductImage);
             txtProductTitle = (TextView) itemView.findViewById(R.id.txtProductTitle);
-            btnGetProduct = (Button) itemView.findViewById(R.id.btnGetProduct);
+            btnGetProduct = (ImageButton) itemView.findViewById(R.id.btnGetProduct);
             btnFav = (ImageButton) itemView.findViewById(R.id.btnFav);
         }
     }

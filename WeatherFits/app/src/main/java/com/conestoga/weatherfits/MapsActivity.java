@@ -254,12 +254,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             new AlertDialog.Builder(this)
                     .setTitle("Error!")
                     .setMessage("You need to select a city to find the fits.")
-                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                        }
-                    });
+                    .setPositiveButton(android.R.string.ok, (dialog, which) -> dialog.dismiss());
         } else {
             tempUrl = WEATHER_URL + "?lat=" + lat + "&lon=" + lon + "&appid=" + appId;
 
