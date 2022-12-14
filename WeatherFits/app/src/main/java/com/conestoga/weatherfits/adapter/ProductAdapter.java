@@ -3,6 +3,7 @@ package com.conestoga.weatherfits.adapter;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,12 +11,18 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.conestoga.weatherfits.R;
 import com.conestoga.weatherfits.model.Product;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -24,11 +31,13 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
 
     private Context context;
     private List<Product> productList;
+    private FirebaseUser user;
 
-    public ProductAdapter(Context context, List<Product> productList){
+    public ProductAdapter(Context context, List<Product> productList, FirebaseUser user){
         super();
         this.context = context;
         this.productList = productList;
+        this.user = user;
     }
 
     @NonNull
@@ -49,6 +58,25 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
                 Uri btnUri = Uri.parse(item.getLink());
                 Intent intent = new Intent(Intent.ACTION_VIEW, btnUri);
                 context.startActivity(intent);
+            }
+        });
+
+        holder.btnFav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseDatabase.getInstance().getReference().child("Users").child(user.getUid()).child("favs").child(item.getName())
+                        .setValue(item).addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        Toast.makeText(context, "Added to favourites", Toast.LENGTH_SHORT).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(context, "Something went wrong!", Toast.LENGTH_SHORT).show();
+                        Log.e("ERROR IN INSERTION: ", e.getMessage());
+                    }
+                });
             }
         });
     }

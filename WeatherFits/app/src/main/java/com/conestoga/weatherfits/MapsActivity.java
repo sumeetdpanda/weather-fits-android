@@ -15,6 +15,7 @@ import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -27,6 +28,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.conestoga.weatherfits.databinding.ActivityMapsBinding;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -36,8 +38,9 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.conestoga.weatherfits.databinding.ActivityMapsBinding;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationBarView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -52,6 +55,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private ActivityMapsBinding binding;
     private FusedLocationProviderClient mLocationClient;
     private LocationManager locationManager;
+    BottomNavigationView bottomNav;
 
     private final String WEATHER_URL = "https://api.openweathermap.org/data/2.5/weather";
     private final String appId = "410dcba1de2ba9722a09724ec7849e66";
@@ -84,8 +88,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         search = findViewById(R.id.search);
         fab = findViewById(R.id.fab);
         btnSearch = findViewById(R.id.btnGetFits);
+        bottomNav = findViewById(R.id.bottomNav);
 
         initMap();
+        setBottomNavView();
 
         mLocationClient = new FusedLocationProviderClient(this);
 
@@ -151,6 +157,26 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 intent.putExtra("IS_RAIN", isRain);
                 intent.putExtra("CITY", city);
                 startActivity(intent);
+            }
+        });
+    }
+
+//    Set Bottom Navigation
+    private void setBottomNavView() {
+        bottomNav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.nav_home:
+                        break;
+                    case R.id.nav_about:
+                        startActivity(new Intent(MapsActivity.this, AboutActivity.class));
+                        break;
+                    case R.id.nav_profile:
+                        startActivity(new Intent(MapsActivity.this, AccountsActivity.class));
+                        break;
+                }
+                return false;
             }
         });
     }
@@ -221,6 +247,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.addMarker(markerOptions);
     }
 
+//    Get Weather Details From OpenWeather API
     private void getWeatherDetails(){
         String tempUrl = "";
         if(city.isEmpty()){

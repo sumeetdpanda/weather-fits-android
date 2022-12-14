@@ -26,4 +26,45 @@
     <string name="street">Street</string>
     <string name="formal">Formal</string>
     <string name="protection">Protection</string>
+
+    <!--    Menu Items  -->
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="about">About</string>
+
+    <string name="favs">Favorites</string>
+    <string name="password">Change Password</string>
+    <string name="new_password">New Password</string>
+    <string name="enter_new_password">Enter new password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="confirm_new_password">Confirm new password</string>
+    <string name="update_password">Update Password</string>
+    <string name="authenticate">Authenticate</string>
+    <string name="enter_password">enter password</string>
+    <string name="current_password">Current Password</string>
+    <string name="update_password1">Update Password</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="gender">Gender</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="update_gender">Update Gender</string>
+    <string name="update_email">Update Email</string>
+    <string name="current_email">Current Email</string>
+    <string name="enter_new_email">Enter New Email</string>
+    <string name="password1">Password</string>
+    <string name="new_email">New Email</string>
+    <string name="meet_the_team">MEET THE TEAM</string>
+    <string name="sanjay">Sanjay Sekar Samuel</string>
+    <string name="sanjay_college_id">8812152</string>
+    <string name="cristhiam">Cristhiam Teran Chiriboga</string>
+    <string name="cristhiam_college_id">8803894</string>
+    <string name="sumeet">Sumeet Shrivastava</string>
+    <string name="sumeet_college_id">8822590</string>
+    <string name="pawandeep">Pawandeep Kour</string>
+    <string name="pawandeep_college_id">8822760</string>
+    <string name="log_in">Log In</string>
+    <string name="already_have_an_account">Already Have an Account?</string>
+    <string name="cancel">Cancel</string>
+    <string name="sign_up">Sign Up</string>
 </resources>

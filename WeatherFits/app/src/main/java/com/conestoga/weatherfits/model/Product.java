@@ -11,6 +11,8 @@ public class Product {
         this.Image = Image;
     }
 
+    public Product(){}
+
     public String getName() {
         return Name;
     }
